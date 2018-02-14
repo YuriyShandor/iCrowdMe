@@ -28,11 +28,11 @@
   font-weight: 300;
 }
 
-.header__nav .toggler-icon {
+.header-nav .toggler-icon {
   display: none;
 }
 
-.header__nav .nav-bar {
+.header-nav .nav-bar {
   margin: 0;
   padding: 0;
   display: -ms-flex;
@@ -41,119 +41,163 @@
   display: flex;
 }
 
-.header__nav .nav-bar .nav-item {
+.header-nav .nav-bar .nav-item {
   position: relative;
   list-style: none;
   margin-left: 30px;
 }
 
-.header__nav .nav-bar .nav-item::after {
+.header-nav .nav-bar .nav-item:first-child {
+  margin-left: 0;
+}
+
+.header-nav .nav-bar .nav-item::after {
   margin: 0 auto;
-  -webkit-transform: translateY(3px);
-  transform: translateY(3px);
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
   content: '';
   display: block;
   width: 0;
   height: 2px;
-  background: #000;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  background: #666;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
 }
 
-.header__nav .nav-bar .nav-item:first-child {
-  margin-left: 0;
-}
-
-.header__nav .nav-bar .nav-item:hover::after {
+.header-nav .nav-bar .nav-item:hover::after {
   width: 100%;
 }
 
-.header__nav .nav-bar .nav-item .nav-link {
+.header-nav .nav-bar .nav-item .nav-link {
   padding: 0;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
   color: #666;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-.header__nav .nav-bar .nav-item .nav-link:hover {
-  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1199px) {
-  .header__nav .nav-bar .nav-item {
+  .header-nav .nav-bar .nav-item {
     margin-left: 50px;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .header__nav {
-    position: relative;
+  .nav-container {
+    width: 100% !important;
   }
-  .header__nav .toggler-icon {
-    margin-right: 20px;
-    display: inline-block;
-    color: #fff;
-    font-size: 30px;
+  .header-nav {
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1 !important;
+  }
+  .header-nav .toggler-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     cursor: pointer;
+    -webkit-transition: all, 0.5s;
+    transition: all, 0.5s;
+    position: absolute;
+    left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+  .header-nav .toggler-icon div {
+    width: 30px;
+    height: 3px;
+    background: #666;
+    margin-top: 5px;
     -webkit-transition: all, 0.5s;
     transition: all, 0.5s;
   }
-  .header__nav .toggler-icon:hover {
-    color: #000;
+  .header-nav .toggler-icon div:first-child {
+    margin-top: 0;
   }
-  .header__nav .nav-bar {
+  .header-nav .toggler-icon_close div {
+    width: 30px;
+    height: 3px;
+    background: #666;
+    margin-top: 5px;
+  }
+  .header-nav .toggler-icon_close div:first-child {
+    margin-top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .header-nav .toggler-icon_close div:nth-child(2) {
+    margin-top: -2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .header-nav .toggler-icon_close div:last-child {
+    display: none;
+  }
+  .header-nav .nav-bar {
     display: none;
     position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100vw;
+    top: 30px;
+    left: 0;
+    width: 100%;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.8);
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.8)));
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+    background: #666;
   }
-  .header__nav .nav-bar .nav-item {
+  .header-nav .nav-bar .nav-item {
     position: relative;
     margin-left: 0;
     padding-top: 20px;
     margin-bottom: 0;
     border-top: none;
     padding-bottom: 20px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all, .3s;
+    transition: all, .3s;
   }
-  .header__nav .nav-bar .nav-item::after {
-    position: relative;
+  .header-nav .nav-bar .nav-item::after {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
     content: '';
     display: block;
     width: 0;
     margin: 0 auto;
     height: 2px;
-    background: #000;
-    -webkit-transition: width .5s;
-    transition: width .5s;
+    background: #333333;
+    -webkit-transition: all, 1.5s;
+    transition: all, 1.5s;
   }
-  .header__nav .nav-bar .nav-item:hover {
-    background: #000;
+  .header-nav .nav-bar .nav-item:hover {
+    background: #4d4d4d;
   }
-  .header__nav .nav-bar .nav-item:hover::after {
+  .header-nav .nav-bar .nav-item:hover::after {
     width: 100%;
   }
-  .header__nav .nav-bar .nav-item .nav-link {
+  .header-nav .nav-bar .nav-item .nav-link {
     color: #fff;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 567px) {
-  .header__nav .toggler-icon {
-    font-size: 26px;
-  }
-  .header__nav .nav-bar .nav-item {
+  .header-nav .nav-bar .nav-item {
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -229,7 +273,7 @@ body {
   margin-top: -10px;
 }
 
-.header__nav {
+.header-nav {
   margin-left: auto;
   margin-right: 75px;
 }
@@ -255,4 +299,51 @@ body {
 
 .header .login-btn:focus {
   background: #7d9823;
+}
+
+@media only screen and (max-width: 1199px) {
+  .header .container {
+    padding: 20px 0;
+  }
+  .header__logo {
+    margin-top: -5px;
+  }
+  .header__logo img {
+    width: 125px;
+  }
+  .header-nav {
+    margin-right: 0px;
+    margin-left: 0;
+  }
+  .header .login-btn {
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header .container {
+    padding: 15px 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .container {
+    padding: 20px 30px;
+  }
+  .header__logo {
+    margin-top: 0px;
+  }
+  .header__logo img {
+    width: 100px;
+  }
+  .header .login-btn {
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .header .container {
+    padding: 15px 10px;
+  }
 }

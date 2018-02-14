@@ -75,7 +75,7 @@ body {
     margin-top: -10px;
   }
 
-  &__nav {
+  &-nav {
     margin-left: auto;
     margin-right: 75px;
   }
@@ -105,17 +105,63 @@ body {
 }
 
 @media only screen and (max-width : 1199px) {
+  .header {
+    .container {
+      padding: 20px 0;
+    }
 
+    &__logo {
+      margin-top: -5px;
+
+      img {
+        width: 125px;
+      }
+    }
+
+    &-nav {
+      margin-right: 0px;
+      margin-left: 0;
+    }
+
+    .login-btn {
+      padding: 10px 20px;
+    }
+  }
 }
 
 @media only screen and (max-width : 991px) {
-
+  .header {
+    .container {
+      padding: 15px 50px;
+    }
+  }
 }
 
 @media only screen and (max-width : 767px) {
+  .header {
+    .container {
+      padding: 20px 30px;
+    }
 
+    &__logo {
+      margin-top: 0px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .login-btn {
+      padding: 7px 15px;
+      font-size: 12px;
+    }
+  }
 }
 
-@media only screen and (max-width : 567px) {
-
+@media only screen and (max-width : 520px) {
+  .header {
+    .container {
+      padding: 15px 10px;
+    }
+  }
 }
