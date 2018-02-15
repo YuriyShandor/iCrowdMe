@@ -13,6 +13,8 @@ $(document).ready(function() {
    autoplaySpeed: 5000,
   });
 
+  // How it works
+
   $(".howIt__btn:nth-child(1)").addClass("howIt__btn_active");
   $(".howIt-block__content:nth-child(1)").addClass("howIt-block__content_active");
 
@@ -23,4 +25,49 @@ $(document).ready(function() {
     $(".howIt-block__content").removeClass("howIt-block__content_active");
     $(".howIt-block__content:nth-child("+ howItBtnIndex +")").addClass("howIt-block__content_active");
   });
+
+  // project-funded
+  var a = 0;
+  $(window).scroll(function() {
+    var oTop = $('.projects-block').offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $('.funded-rate').each(function () {
+        $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+        },
+        {
+          duration: 3000,
+          easing: 'swing',
+          step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+        });
+      });
+      a = 1;
+    }
+  });
+
+  $(function() {
+    var $section = $('.projects-block');
+
+    function loadDaBars() {
+      $(".project-funded__rate").each(function() {
+        $(this).data("origWidth",
+        $(this).width()).width(0).animate( {
+          width: $(this).data("origWidth")
+        }, 3000);
+      });
+    }
+
+    $(document).bind('scroll', function(ev) {
+      var scrollOffset = $(document).scrollTop();
+      var containerOffset = $section.offset().top - window.innerHeight;
+      if (scrollOffset > containerOffset) {
+          loadDaBars();
+          $(document).unbind('scroll');
+      }
+    });
+  });
+
+  //
 });

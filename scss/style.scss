@@ -1028,7 +1028,118 @@ body {
   }
 }
 
+// =============== Section projects ================
 
+.section-projects {
+  padding-top: 80px;
+
+  &__heading {
+    width: 100%;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 25px;
+    margin-bottom: 65px;
+
+    div {
+      width: 58%;
+    }
+
+    h3 {
+      font-size: 29px;
+      font-weight: 400;
+      color: #515151;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 17px;
+      font-weight: 400;
+      color: #8f8f8f;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    a {
+      font-size: 15px;
+      font-weight: 600;
+      color: #515151;
+      text-decoration: none;
+      padding: 20px 25px;
+      background: transparent;
+      border: 1px solid #b6b6b6;
+      border-radius: 5px;
+      -webkit-transition: all, .5s;
+      transition: all, .5s;
+
+      &:hover {
+        color: #fff;
+        background: $lightGreen;
+      }
+    }
+  }
+
+  .projects-block {
+    width: 100%;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.project {
+  width: 340px;
+  border-radius: 13px;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+
+  &__image {
+    width: 100%;
+  }
+
+  &_new {
+    width: 74px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__price {
+    padding: 10px;
+    background: #26a6d1;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    position: absolute;
+    top: 200px;
+    left: 180px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
