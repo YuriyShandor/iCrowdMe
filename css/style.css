@@ -247,7 +247,7 @@ body {
 
 @media only screen and (max-width: 520px) {
   .container {
-    width: 290px;
+    width: 95vw;
   }
 }
 
@@ -345,5 +345,201 @@ body {
 @media only screen and (max-width: 520px) {
   .header .container {
     padding: 15px 10px;
+  }
+}
+
+.section-baner {
+  width: 100%;
+  position: relative;
+}
+
+.section-baner .baner-slider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section-baner .baner-slider__slide {
+  width: 100%;
+  padding: 167px 0;
+  background: url(../img/baner-skider__bg.jpg) no-repeat center/cover;
+  position: relative;
+}
+
+.section-baner .baner-slider__slide::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(126, 157, 135, 0.6);
+}
+
+.section-baner .baner-slider__slide .container {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section-baner .baner-slider__slide .container * {
+  z-index: 5;
+}
+
+.section-baner .baner-slider__slide h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.section-baner .baner-slider__slide span {
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.section-baner .baner-slider__slide a {
+  padding: 30px 40px;
+  background: #add136;
+  border-radius: 5px;
+  margin-top: 50px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+.section-baner .baner-slider__slide a:hover {
+  background: #8ead27;
+}
+
+.section-baner .baner-slider__arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(525px);
+  transform: translateX(525px);
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-baner .baner-slider__arrow div {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+.section-baner .baner-slider__arrow div:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 1199px) {
+  .section-baner .baner-slider__slide {
+    width: 100%;
+    padding: 140px 0;
+  }
+  .section-baner .baner-slider__slide h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  .section-baner .baner-slider__slide span {
+    font-size: 33px;
+  }
+  .section-baner .baner-slider__slide a {
+    padding: 20px 30px;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  .section-baner .baner-slider__arrow {
+    bottom: 40px;
+    -webkit-transform: translateX(420px);
+    transform: translateX(420px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .section-baner .baner-slider__slide {
+    width: 100%;
+    padding: 110px 0;
+  }
+  .section-baner .baner-slider__slide h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+  .section-baner .baner-slider__slide span {
+    font-size: 28px;
+  }
+  .section-baner .baner-slider__slide a {
+    padding: 20px 30px;
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  .section-baner .baner-slider__arrow {
+    bottom: 30px;
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-baner .baner-slider__slide {
+    width: 100%;
+    padding: 75px 0;
+  }
+  .section-baner .baner-slider__slide h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .section-baner .baner-slider__slide span {
+    font-size: 24px;
+  }
+  .section-baner .baner-slider__slide a {
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  .section-baner .baner-slider__arrow {
+    bottom: 20px;
+    -webkit-transform: translateX(190px);
+    transform: translateX(190px);
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .section-baner .baner-slider__arrow {
+    bottom: 20px;
+    -webkit-transform: translateX(29vw);
+    transform: translateX(29vw);
   }
 }
