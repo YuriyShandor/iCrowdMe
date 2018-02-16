@@ -1161,7 +1161,6 @@ body {
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 100px;
 }
 
 .project {
@@ -1437,5 +1436,222 @@ body {
     font-size: 16px;
     top: 175px;
     left: 145px;
+  }
+}
+
+.comments {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background: url(../img/section-comments__bg.jpg) no-repeat center/cover;
+}
+
+.comments__heading {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.comments__heading h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #add136;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.comments__heading p {
+  font-size: 19px;
+  font-weight: 400;
+  color: #949494;
+  text-align: center;
+  margin: 0;
+}
+
+.comments__block {
+  margin-top: 100px;
+  padding: 0 50px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.comments__block .comment {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.comments__block .comment__discr {
+  width: 400px;
+  height: 145px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  padding: 25px 35px;
+  text-align: center;
+}
+
+.comments__block .comment__discr h6 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #add136;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.comments__block .comment__discr p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #848484;
+  margin: 0;
+}
+
+.comments__block .comment__discr .triangle {
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-left: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  position: absolute;
+  left: 85px;
+  bottom: -25px;
+}
+
+.comments__block .comment__author {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 34px;
+}
+
+.comments__block .comment__author span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #494949;
+  margin-left: 18px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .comments {
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+  .comments__heading {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .comments__heading {
+    padding: 0 25px;
+  }
+  .comments__heading h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .comments__heading p {
+    font-size: 14px;
+  }
+  .comments__block {
+    margin-top: 75px;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .comments__block .comment {
+    margin-top: 30px;
+  }
+  .comments__block .comment:nth-child(1) {
+    margin-left: -200px;
+  }
+  .comments__block .comment:nth-child(2) {
+    margin-left: 200px;
+  }
+  .comments__block .comment__discr {
+    width: 400px;
+    height: 145px;
+    padding: 25px 35px;
+  }
+  .comments__block .comment__discr h6 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .comments__block .comment__discr p {
+    font-size: 13px;
+  }
+  .comments__block .comment__discr .triangle {
+    left: 85px;
+    bottom: -25px;
+  }
+  .comments__block .comment__author {
+    margin-left: 50px;
+    margin-top: 34px;
+  }
+  .comments__block .comment__author span {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .comments__heading {
+    padding: 0 20px;
+  }
+  .comments__block {
+    margin-top: 50px;
+  }
+  .comments__block .comment {
+    margin-top: 30px;
+  }
+  .comments__block .comment:nth-child(1) {
+    margin-left: -50px;
+  }
+  .comments__block .comment:nth-child(2) {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .comments__heading h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .comments__block {
+    margin-top: 25px;
+  }
+  .comments__block .comment {
+    margin-top: 30px;
+  }
+  .comments__block .comment:nth-child(1) {
+    margin-left: 0px;
+  }
+  .comments__block .comment:nth-child(2) {
+    margin-left: 0px;
+  }
+  .comments__block .comment__discr {
+    width: 280px;
+    height: 160px;
+    padding: 20px 25px;
   }
 }
