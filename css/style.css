@@ -247,7 +247,7 @@ body {
 
 @media only screen and (max-width: 520px) {
   .container {
-    width: 95vw;
+    width: 90vw;
   }
 }
 
@@ -1316,12 +1316,78 @@ body {
   .project {
     width: 290px;
   }
-  .project__discr {
-    width: 90%;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .project__discr h4 {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  .project__discr p {
+    font-size: 14px;
+  }
+  .project__discr .project-funded {
+    height: 12px;
+  }
+  .project__discr .project-funded__discr {
+    padding-bottom: 15px;
+  }
+  .project__discr .project-funded__discr span {
+    font-size: 12px;
+  }
+  .project__discr .see-details {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  .project__price {
+    padding: 7px;
+    font-size: 16px;
+    top: 175px;
+    left: 145px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .section-projects {
+    padding-top: 50px;
+  }
+  .section-projects__heading {
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+  .section-projects__heading div {
+    width: 64%;
+  }
+  .section-projects__heading h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .section-projects__heading p {
+    font-size: 14px;
+  }
+  .section-projects__heading a {
+    font-size: 12px;
+  }
+  .project {
+    width: 320px;
+    margin-top: 20px;
+  }
+  .project__price {
+    top: 195px;
+    left: 175px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-projects__heading {
+    padding: 0 20px;
+  }
+  .section-projects__heading div {
+    width: 59%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .section-projects__heading {
+    padding: 0 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1330,82 +1396,46 @@ body {
     -ms-flex-align: center;
     align-items: center;
   }
+  .section-projects__heading div {
+    width: 90%;
+  }
+  .section-projects__heading h3 {
+    text-align: center;
+  }
+  .section-projects__heading p {
+    text-align: center;
+  }
+  .section-projects__heading a {
+    margin-top: 25px;
+  }
+  .project {
+    width: 290px;
+  }
   .project__discr h4 {
-    margin: 0;
-    font-size: 17px;
-    font-weight: 700;
-    color: #484848;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
   .project__discr p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #484848;
-    margin: 0;
+    font-size: 14px;
   }
   .project__discr .project-funded {
-    width: 100%;
-    height: 14px;
-    background: #e3e3e3;
-    border-radius: 14px;
-    margin: 20px 0;
-  }
-  .project__discr .project-funded__rate {
-    height: 100%;
-    background: #add136;
-    border-radius: 14px;
+    height: 12px;
   }
   .project__discr .project-funded__discr {
-    width: 100%;
-    padding-bottom: 17px;
-    border-bottom: 1px solid #d6d6d6;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    padding-bottom: 15px;
   }
   .project__discr .project-funded__discr span {
-    font-size: 13px;
-    font-weight: 600;
-    color: #8d8d8d;
+    font-size: 12px;
   }
   .project__discr .see-details {
-    margin: 20px 0;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    background: #26a6d1;
-    border-radius: 5px;
-    -webkit-transition: all, .5s;
-    transition: all, .5s;
-  }
-  .project__discr .see-details:hover {
-    background: #add136;
-  }
-  .project_new {
-    width: 74px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin: 15px 0;
+    font-size: 14px;
   }
   .project__price {
-    padding: 10px;
-    background: #26a6d1;
-    border-radius: 3px;
-    font-size: 17px;
-    font-weight: 400;
-    color: #fff;
-    position: absolute;
-    top: 200px;
-    left: 180px;
-  }
-  .project__price span {
-    font-weight: 700;
+    padding: 7px;
+    font-size: 16px;
+    top: 175px;
+    left: 145px;
   }
 }
