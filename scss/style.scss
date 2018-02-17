@@ -231,7 +231,7 @@ body {
       }
 
       a {
-        padding: 30px 40px;
+        padding: 20px 30px;
         background: $lightGreen;
         border-radius: 5px;
         margin-top: 50px;
@@ -303,7 +303,6 @@ body {
         }
 
         a {
-          padding: 20px 30px;
           margin-top: 40px;
           font-size: 18px;
         }
@@ -1668,21 +1667,77 @@ body {
   }
 }
 
+// Section Partners
+
+.partners {
+  padding: 50px 0;
+  border-bottom: 1px solid #ededed;
+
+  &-slider {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &__slide {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      outline: none;
+
+      a {
+        outline: none;
+      }
+
+      img {
+        width: 125px;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+        -webkit-transition: all, .3s;
+        transition: all, .3s;
+
+        &:hover {
+          -webkit-filter: grayscale(0%);
+                  filter: grayscale(0%);
+        }
+      }
+    }
+  }
+
+  .slick-track {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 @media only screen and (max-width : 1199px) {
-
+  .partners {
+    &-slider {
+      &__slide {
+        img {
+          width: 110px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 991px) {
-
-}
-
-@media only screen and (max-width : 767px) {
-
-}
-
-@media only screen and (max-width : 520px) {
-
+  .partners {
+    &-slider {
+      &__slide {
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
 }
 
 

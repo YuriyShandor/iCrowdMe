@@ -69,5 +69,35 @@ $(document).ready(function() {
     });
   });
 
-  //
+  // Partners slider
+  $(".partners-slider").slick({
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  });
 });
